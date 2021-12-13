@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/memeImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#23534F"
+        app:layout_constraintBottom_toTopOf="@+id/shareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/memeImageView"
+        app:layout_constraintLeft_toLeftOf="@+id/memeImageView"
+        app:layout_constraintRight_toRightOf="@+id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/memeImageView"/>
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:padding="20dp"
+        android:textColor="#1F323A"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3E337"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        android:onClick="shareMeme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B10A43"
+        android:onClick="nextMeme"
+        android:padding="20dp"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="#35F43D"
+        android:textColorHint="@color/purple_200"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_percent=".5"
+        android:layout_width="wrap_content"
+        android:foregroundGravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
